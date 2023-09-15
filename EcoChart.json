@@ -1,0 +1,46 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Imports",
+    "subtitle": "Goods, £ million GBP | Source: ONS through ECO API",
+    "fontSize": "14",
+    "subtitleFontSize": "12",
+    "color": "#38571a",
+    "subtitleColor": "#371a94"
+  },
+  "height": "250",
+  "width": "320",
+  "background": "#ffffff",
+  "view": {
+    "fill": "#ffffff"
+  },
+  "data": {
+    "url": "https://api.economicsobservatory.com/gbr/impo?vega",
+    "format": {
+      "type": "json"
+    }
+  },
+  "mark": {
+    "type": "line",
+    "color": "#942192",
+    "strokeWidth": "2"
+  },
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {
+        "title": "Time",
+        "titleColor": "#122B39"
+      }
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "axis": {
+        "title": "Value",
+        "titleColor": "#122B39"
+      }
+    }
+  }
+}
